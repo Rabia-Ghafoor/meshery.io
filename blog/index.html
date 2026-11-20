@@ -76,7 +76,9 @@
       </script>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN"
+      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/css/subscribe.css" />
 
@@ -176,7 +178,7 @@
 
 <!-- Sitewide Banner -->
 <div class="sitewide-banner hidden">
-  <p>Meshery is now a CNCF Incubating project.</p>
+  <p>Meshery is a CNCF Incubating project.</p>
   <p>
     <a href="https://www.cncf.io/blog/2026/10/07/meshery-becomes-a-cncf-incubating-project/">Read the announcement</a>
   </p>
@@ -556,13 +558,26 @@
 	<section class="page">
 		<div class="container ">	
 			
+					  
+						
+						
+						
+						<div>
+  
+  <h1 class="catalog-heading">Meshery Blog</h1>
+  
+
+  
+
+  
+    <p  class="catalog-subtext">Explore all Meshery blog posts, tutorials, and updates.</p>
+  
+</div>
 					   
 					
 				
 				
 
-			
-				<p class="subtext">Explore all Meshery blog posts, tutorials, and updates.</p>
 			
 			<div class="blog-container">
     <!-- Search Section -->
@@ -576,7 +591,7 @@
         />
         <button id="clear-search-btn" class="clear-search" title="Clear search" style="display:none;">×</button>
       </div>
-      <div id="search-summary" class="search-summary" style="display:none;"></div>
+      <div id="search-summary" class="search-summary" aria-live="polite" style="display:none;"></div>
     </div>
 
     <!-- Search Results (hidden by default) -->
@@ -1418,10 +1433,10 @@
                   
                     <li>
                       <details class="archive-month">
-                        <summary>January</summary>
+                        <summary>February</summary>
                         <ul class="archive-posts">
                           
-                            <li><a href="/blog/2024/01/2024-02-17-simplifying-cloud-infrastructure-and-kubernetes-management/">Simplifying Cloud Infrastructure and Kubernetes Management</a></li>
+                            <li><a href="/blog/2024/02/2024-02-17-simplifying-cloud-infrastructure-and-kubernetes-management/">Simplifying Cloud Infrastructure and Kubernetes Management</a></li>
                           
                         </ul>
                       </details>
@@ -1795,6 +1810,18 @@
   margin-bottom: 2rem;
 }
 
+.search-show-more-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.search-show-more-btn {
+  cursor: pointer;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+}
+
 .search-highlight {
   background-color: rgba(0, 211, 169, 0.3);
   color: var(--brand-color-secondary);
@@ -2058,6 +2085,9 @@ ul.archive-months {
 </style>
 
 <!-- Blog Search Script -->
+<script>
+  window.blogSearchIndexVersion = "1793491200";
+</script>
 <script src="/js/blog-search.js"></script>
 
 		</div>
@@ -2340,7 +2370,8 @@ ul.archive-months {
 
 	</div>
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+
 
 <script src="/js/stellarnav.min.js"></script>
 

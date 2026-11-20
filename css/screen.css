@@ -10,6 +10,12 @@ footer .footer-columns, .contact-box, .features {
 
 html {
   background: #3c494f;
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 html, body {
@@ -2325,8 +2331,25 @@ a.nav-text:hover {
 }
 .menu-toggle .bars span {
   background-color: var(--color-secondary-dark) !important;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
 }
 
+.stellarnav.active .menu-toggle .bars span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.stellarnav.active .menu-toggle .bars span:nth-child(2) {
+  opacity: 0;
+}
+.stellarnav.active .menu-toggle .bars span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-toggle .bars span {
+    transition: none !important;
+  }
+}
 .stellarnav.mobile .menu-toggle {
   display: inline-flex;
   cursor: pointer;
@@ -3180,12 +3203,11 @@ body.dark-mode .leaderboard-updated {
   text-align: center;
   color: var(--color-secondary-light);
 }
-.calendar-meetings h1 {
-  margin-top: 2rem;
-  margin-bottom: 0rem;
-}
 .calendar-meetings p {
   margin: 0;
+}
+.calendar-meetings .catalog-subtext {
+  margin-bottom: 2rem;
 }
 .calendar-meetings .fc-button {
   transition: all 0.4s;
@@ -4549,10 +4571,6 @@ label {
   display: none;
 }
 
-.dropbtn {
-  display: none;
-}
-
 .contentdata {
   margin: 0;
   padding: 0;
@@ -4789,12 +4807,6 @@ label {
   .catalog-load-more {
     display: unset;
   }
-  .dropbtn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-  }
   .viewall {
     justify-content: center;
   }
@@ -4821,10 +4833,6 @@ label {
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 0.15rem;
-  }
-  .filter-wrap .dropdown {
-    align-self: center;
-    margin-bottom: 7rem;
   }
   .filter-wrap .category-div {
     padding-left: 15px;
@@ -6146,6 +6154,12 @@ img.pattern-snapshot:hover {
 .content-body-section {
   display: flex;
   flex-direction: column;
+  scroll-margin-top: 6.5rem;
+}
+@media (max-width: 768px) {
+  .content-body-section {
+    scroll-margin-top: 5rem;
+  }
 }
 
 .content-body-section h1,
@@ -6186,7 +6200,8 @@ img.pattern-snapshot:hover {
   background: var(--background-nav-fixed);
   color: var(--color-nav-fixed);
   font-size: 15px;
-  height: 100%;
+  height: fit-content;
+  align-self: flex-start;
 }
 
 .nav-fixed p {
